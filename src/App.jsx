@@ -6,6 +6,13 @@ import ReusableForm from "./ReusableForm";
 // import StateFulForm from "./StateFulForm";
 
 function App() {
+  const handleSignIn = (data) => {
+    console.log("Sign id Data: ", data);
+  };
+
+  const handleUpdateProfile = (data) => {
+    console.log("Update Profile Data: ", data);
+  };
   return (
     <>
       <h1>Vite + React</h1>
@@ -13,9 +20,18 @@ function App() {
       {/* <StateFulForm></StateFulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={"Sign in"}></ReusableForm>
-      <ReusableForm formTitle={"Update Profile"} btn={"Update"}></ReusableForm>
-      <ReusableForm formTitle={"Create id"} btn={"Create"}></ReusableForm>
+      <ReusableForm formTitle={"Sign in"} handleSubmit={handleSignIn}>
+        <h2>Sign Up</h2>
+        <p>Sign up to get access to all the elements.</p>
+      </ReusableForm>
+      <ReusableForm
+        formTitle={"Update Profile"}
+        handleSubmit={handleUpdateProfile}
+        btn={"Update"}
+      >
+        <h2>Update Profile</h2>
+        <p>Always keep your profile updated.</p>
+      </ReusableForm>
     </>
   );
 }
