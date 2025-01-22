@@ -1,18 +1,19 @@
 // import Form from "./SimpleForm";
 import "./App.css";
-import ReusableForm from "./ReusableForm";
+import Grandpa from "./Grandpa/Grandpa";
+// import ReusableForm from "./ReusableForm";
 // import HookForm from "./HookForm";
 // import RefForm from "./RefForm";
 // import StateFulForm from "./StateFulForm";
 
 function App() {
-  const handleSignIn = (data) => {
-    console.log("Sign id Data: ", data);
-  };
+  // const handleSignIn = (data) => {
+  //   console.log("Sign id Data: ", data);
+  // };
 
-  const handleUpdateProfile = (data) => {
-    console.log("Update Profile Data: ", data);
-  };
+  // const handleUpdateProfile = (data) => {
+  //   console.log("Update Profile Data: ", data);
+  // };
   return (
     <>
       <h1>Vite + React</h1>
@@ -20,7 +21,7 @@ function App() {
       {/* <StateFulForm></StateFulForm> */}
       {/* <RefForm></RefForm> */}
       {/* <HookForm></HookForm> */}
-      <ReusableForm formTitle={"Sign in"} handleSubmit={handleSignIn}>
+      {/* <ReusableForm formTitle={"Sign in"} handleSubmit={handleSignIn}>
         <h2>Sign Up</h2>
         <p>Sign up to get access to all the elements.</p>
       </ReusableForm>
@@ -31,7 +32,8 @@ function App() {
       >
         <h2>Update Profile</h2>
         <p>Always keep your profile updated.</p>
-      </ReusableForm>
+      </ReusableForm> */}
+      <Grandpa></Grandpa>
     </>
   );
 }
